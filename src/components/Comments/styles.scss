@@ -1,0 +1,123 @@
+@import '../../utils/styles/global.scss';
+
+.comments{
+    margin: 25px 0 15px 0;
+
+    &__header{
+        cursor: pointer;
+        width: auto;
+        p{
+            width: auto !important;
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        padding: 10px;
+        border-radius: 5px;
+        max-height: 505px;
+        overflow-y: auto;
+
+        &--message{
+            min-width: 500px;
+            background-color: #0000000f;
+            padding: 6px 8px 8px 9px;
+            border-radius: 5px;
+            margin: 2px 0;
+
+            @include breakpoint(md) {
+                width: 100% !important;
+            }
+
+            &__user{
+                display: flex;
+                p {
+                    margin: 0 0 0 5px;
+                    font-size: 0.9rem;
+                    font-weight: 700 !important;
+                }
+            }
+
+            &__comment{
+                p {
+                    margin: 1px 0 0 30px;
+                    font-size: 14.2px;
+
+                    p {
+                            margin: 0;
+                        }
+                }
+            }
+
+            &__time{
+                display: flex;
+                justify-content: flex-end;
+                p{
+                    margin: 0;
+                    font-size: 11px;
+                }
+            }
+
+            &__attachment{
+                &--item{
+                    display: flex;
+                    align-items: center;
+                    margin: 5px 0 0 30px;
+
+                    p{
+                        margin: 0;
+                        font-size: 0.8rem;
+                    }
+
+                    input{
+                        margin: 0 0 0 5px;
+                    }
+                }
+
+                &--item:nth-child(1){
+                    width: auto;
+                    padding: 5px;
+                    border: 1px solid blue;
+                    cursor: pointer;
+                    color: blue;
+                }
+            }
+        }
+
+               
+
+        &--mine{
+            align-self: flex-end;
+        }
+
+        &--recevier{
+            align-self: flex-start;
+        }
+
+        &--no-comments{
+            text-align: center;
+            margin: 10px 0;
+        }
+    }
+
+    &__body::-webkit-scrollbar-thumb {
+        background-color: #aca9a9;
+        border-radius: 10px;
+    }
+
+    &__body::-webkit-scrollbar-track {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+    }
+
+    &__body::-webkit-scrollbar {
+        width: 10px;
+    }
+}
+
+#tax-file{
+    margin-left: 10px;
+}

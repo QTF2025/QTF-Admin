@@ -1,0 +1,16 @@
+.unauthorized_container{
+    display: grid;
+    place-items: center;
+
+    &--image{
+        img{
+            object-fit: contain;
+            height: 500px;
+            width: 100%;
+        }
+    }
+
+    button{
+        background-color: #ff4f5a !important;
+    }
+}

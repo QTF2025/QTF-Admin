@@ -1,0 +1,24 @@
+@import '../../utils/styles/global.scss';
+
+.lead-history{
+    overflow: hidden;
+    
+    &__modal{
+        min-width: 800px;
+
+        @include breakpoint(md) {
+            min-width: fit-content;
+        }
+    }
+}
+
+.reportdata{
+    p{
+        margin: 0;
+    }
+}
+
+.sucess-message {
+    font-size: 36;
+    color: #04AA6D;
+}

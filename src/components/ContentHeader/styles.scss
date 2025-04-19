@@ -1,0 +1,25 @@
+.content-header{
+    display: flex;
+    align-items: center;
+    background-color: #0099cc;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 6px 8px;
+    font-size: 18px;
+    justify-content: space-between;
+
+    p{
+        margin: 0;
+    }
+
+    button{
+        padding: 2px 5px;
+        background-color: transparent;
+        color: white;
+
+        &:hover{
+            color: white !important;
+            border: 1px solid white !important;
+        }
+    }
+}

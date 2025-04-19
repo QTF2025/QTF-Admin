@@ -1,0 +1,10 @@
+@import '../../../utils/styles/global.scss';
+
+.tax-config-view {
+    overflow: hidden;
+min-width: 1000px;
+
+    @include breakpoint(md) {
+        min-width: fit-content;
+    }
+}

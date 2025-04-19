@@ -1,0 +1,29 @@
+@import '../../../../../utils/styles/global.scss';
+
+.add-actions{
+    display: flex;
+    justify-content: flex-end;
+
+    @include breakpoint(sm) {
+        align-items: start;
+    }
+}
+.add-dependent-btn {
+    height: auto;
+    font-size: 20px;
+    line-height: 15px;
+    text-align: right;
+
+    &.green {
+        color: #fff;
+        background: #48a458;
+
+        &:hover {
+            color: #fff !important;
+        }
+    }
+
+    span {
+        vertical-align: middle;
+    }
+}

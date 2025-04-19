@@ -1,0 +1,9 @@
+.comment-box{
+    display: flex;
+    flex-direction: column;
+
+    &__button{
+        align-self: flex-end;
+        margin: 10px 0;
+    }
+}

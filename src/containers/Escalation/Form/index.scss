@@ -1,0 +1,45 @@
+.form-container__body {
+  padding: 20px;
+}
+.labelname strong {
+  line-height: 38px;
+  width: 160px;
+  display: inline-block;
+}
+  .comments-section {
+    margin-top: 20px;
+  }
+  
+  .comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .comment-item {
+    justify-content: flex-start;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    width: 100%;
+  }
+  
+  .comment-item.left {
+    align-items: flex-start;
+  }
+  
+  .comment-item.right {
+    align-items: flex-end;
+    background: #e0f7fa; // Optional: Different background color for "currentUser" comments
+    text-align: right;
+  }
+  
+  .comment-content {
+    max-width: 100%;
+  }
+  
+  .comments-form {
+    margin-top: 20px;
+  }
+  

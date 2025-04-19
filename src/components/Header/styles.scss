@@ -1,0 +1,44 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 35px;
+
+    &__right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            .ant-avatar {
+                cursor: pointer;
+            }
+
+            &--content{
+                &__title{
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+            }
+        }
+}
+
+.cell_icon {
+    padding: 0 !important;
+    font-size: 1.5rem;
+}
+
+.header_icons {
+    display: inline-block !important;
+    margin: 0 10px;
+    padding: 0 !important;
+}
+
+.ant-popover-inner{
+    padding: 5px !important;
+}
+.profile-list{
+    p{
+        margin: 10px 15px !important;
+        cursor: pointer;
+    }
+}

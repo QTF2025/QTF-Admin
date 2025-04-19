@@ -1,0 +1,155 @@
+@import '../../utils/styles/global.scss';
+
+.dashboard-container{
+    margin: 0 auto;
+    width: 95%;
+    &__leads{
+        margin-top: 30px;
+
+        &--header{
+            &__title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p{
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    margin: 5px;
+                }
+            }
+        }
+
+        &--content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+            grid-gap: 30px;
+            padding: 15px;
+
+            @include breakpoint(xxl) {
+                grid-template-columns: 250px 250px 250px 250px;
+                grid-gap: 10px;
+            }
+
+            @include breakpoint(md) {
+                grid-template-columns: 0.5fr 0.5fr;
+                grid-gap: 10px;
+            }
+
+            @include breakpoint(sm) {
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
+            }
+
+            &__item{
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+                cursor: pointer;
+                padding: 25px;
+                display: grid;
+                place-items: center;
+                
+                &:hover{
+                    transform: scale(1.1);
+                }
+
+                &--text{
+                    p:nth-child(1){
+                        margin-top: 10px;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+                    p:nth-child(2){
+                        font-weight: 600;
+                    }
+                    p{
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+
+        &__leadsContactPerson {
+            margin-top: 15px;
+    
+            &--header {
+                &__title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    p {
+                        font-weight: bold;
+                        margin: 0;
+                        font-size: 1rem;
+                        // margin: 5px;
+                    }
+                }
+            }
+    
+            &--contentPerson {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 239px));
+                grid-gap: 8px;
+                padding: 8px;
+    
+                // @include breakpoint(xxl) {
+                //     grid-template-columns: 250px 250px 250px 250px;
+                //     grid-gap: 10px;
+                // }
+    
+                @include breakpoint(md) {
+                    grid-template-columns: 0.5fr 0.5fr;
+                    grid-gap: 10px;
+                }
+    
+                &__item {
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                    background-color: white;
+                    border-radius: 5px;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+                    cursor: pointer;
+                    padding: 10px;
+                    display: grid;
+                    place-items: center;
+                    line-height: 30px;
+                    font-size: 14px !important;
+    
+                    * {
+                        margin: 0;
+                    }
+    
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    &--title{
+                        font-weight: bold;
+                    }
+    
+                    // &--text {
+                    //     p:nth-child(1) {
+                    //         margin-top: 10px;
+                    //         font-weight: bold;
+                    //         font-size: 1.5rem;
+                    //     }
+    
+                    //     p:nth-child(2) {
+                    //         font-weight: 600;
+                    //     }
+    
+                    //     p {
+                    //         margin: 5px 0;
+                    //     }
+                    // }
+    
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+}

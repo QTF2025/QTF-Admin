@@ -1,0 +1,17 @@
+.form-container {
+
+    &__body {
+        padding: 35px 25px;
+        background-color: white;
+        border: 1px solid rgb(192, 190, 190);
+    }
+
+    &__form-body {
+        margin: 0 auto !important;
+        max-width: 600px !important;
+
+        button:nth-child(1) {
+            margin-right: 8px !important;
+        }
+    }
+}

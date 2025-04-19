@@ -1,0 +1,21 @@
+@import '../../utils/styles/global.scss';
+
+.layout{
+    display: flex;
+
+    &__body{
+        width: 100%;
+
+        &--header{
+            height: 65px;
+            box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.2);
+        }
+
+        &--main{
+            padding: 16px;
+            background-color: #f1f1f1;
+            min-height: 93vh;
+        }
+    }
+    
+}
