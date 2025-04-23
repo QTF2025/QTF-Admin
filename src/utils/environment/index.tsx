@@ -2,9 +2,6 @@ import axios from "axios";
 import localStorageContent from "../localstorage";
 
 const URL = axios.create({
-  //baseURL: "http://68.183.92.155:8080/v1",
-  //baseURL: "http://134.209.150.58:8080/v1",
-  //baseURL: 'https://api.crescenttaxfiling.com/v1'
   baseURL: process.env.REACT_APP_API_BASE_URL
 });
 
