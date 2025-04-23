@@ -73,6 +73,7 @@
     "@types/react-rte": "^0.16.8",
     "@types/react-signature-canvas": "^1.0.4",
     "@types/redux-saga": "^0.10.5",
+    "ajv": "^7.2.4",
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1"
   }

@@ -8,7 +8,7 @@ import './styles.scss'
 import GenerateElements from '../../components/GenerateElements';
 import { formLayout, formTailLayout } from '../../utils';
 import localStorageContent from '../../utils/localstorage';
-
+import logo from '../../assets/images/qtflogo.png'
 const Auth = () => {
     const state: IInitialState = useSelector((state: any) => state.store)
     const { isAuthenticated, isAuthLoading } = state;
@@ -63,7 +63,8 @@ const Auth = () => {
     return (
         <div className="auth-container">
             <div className="auth-container__login">
-                <h3 className="auth-container__login--title">Login to CTF CRM</h3>
+                <h3 className="auth-container__login--title">Login to Quess Tax Filing</h3>
+                 {/* <img src={logo} alt='logo' style={{width: '40%'}} /> */}
                 <Form
                     name="basic"
                     {...formLayout}

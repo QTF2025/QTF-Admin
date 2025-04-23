@@ -1,7 +1,7 @@
 .auth-container{
     position: relative;
     height: 100vh;
-    background-image: url('../../assets/images/login.jpg') !important;
+    background-image: url('../../assets/images/loginpage.jpg') !important;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -13,7 +13,8 @@
         transform: translate(-50%, -50%);
         background-color: white;
         padding: 15px 30px;
-        border-radius: 5px;
+        border-radius: 15px;
+        border: 3px solid #999;
 
         &--title{
             text-align: center;
