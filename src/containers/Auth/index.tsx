@@ -63,8 +63,8 @@ const Auth = () => {
     return (
         <div className="auth-container">
             <div className="auth-container__login">
-                <h3 className="auth-container__login--title">Login to Quess Tax Filing</h3>
-                 {/* <img src={logo} alt='logo' style={{width: '40%'}} /> */}
+                
+                <h3 className="auth-container__login--title"><img src={logo} alt='logo' style={{width: '40%'}} /></h3>
                 <Form
                     name="basic"
                     {...formLayout}
@@ -82,7 +82,7 @@ const Auth = () => {
                     <Form.Item
                         {...formTailLayout}
                     >
-                    <Button type="primary" htmlType="submit" disabled={isAuthLoading}>
+                    <Button className='loginbutton' type="primary" htmlType="submit" disabled={isAuthLoading}>
                        {isAuthLoading ? 'Signing In...' : 'Submit'}
                     </Button>
                     </Form.Item>

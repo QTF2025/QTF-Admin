@@ -2,7 +2,7 @@
     width: 200px;
     height: 100%;
     // height: 100vh;
-    background-color: #3ba0e9;
+    background-color: #333333;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@
         color: white;
         padding: 10px;
         height: 65px;
-        background-color: #027da6;
+        background-color: #00599c;
         align-items: center;
 
         &--image{
@@ -56,12 +56,12 @@
         }
 
         &:hover{
-            background-color: #495663;
+            background-color: #000;
         }
     }
 
     &__item-selected{
-        background-color: #495663;
+        background-color: #000;
     }
 }
 
@@ -77,7 +77,11 @@
 
 .fllowup-data-report__timezones--time {
     margin-top:20px ;
-    border-color: #6366F1 !important;
-    background-color: #6366F1;
+    border-color: #72ad32 !important;
+    background-color: #72ad32;
     color: #fff;
+}
+
+td.ant-table-cell.noselect svg {
+    color: #00599c;
 }
