@@ -629,7 +629,8 @@ const Lead = () => {
                                   item?.attachment === ""
                               )?.length <= 0) || // This block handles departmentId 4
                             (leadData?.department_id === 6 &&
-                              leadData.online_final_attachments === null) // This block handles departmentId 6
+                              leadData.online_final_attachments === null) || // This block handles departmentId 6
+                              (!leadData.leadDocuments || leadData.leadDocuments.length === 0)
                           }
                         >
                           {leadData?.department_id === 6

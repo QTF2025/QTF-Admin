@@ -78,20 +78,20 @@ const Dashboard = () => {
   const [isTeamDropdownDisabled, setIsTeamDropdownDisabled] = useState(true); // Initially disabled
 
   const cards = [
-    {
-      title: "Process Leads",
-      Icon: FaUserClock,
-      count: 100,
-      keys: ["processLeads"],
-    },
+    // {
+    //   title: "Process Leads",
+    //   Icon: FaUserClock,
+    //   count: 100,
+    //   keys: ["processLeads"],
+    // },
+    // {
+    //   title: "Preparation Leads",
+    //   Icon: FaUserEdit,
+    //   count: 10,
+    //   keys: ["verificationLeads"],
+    // },
     {
       title: "Preparation Leads",
-      Icon: FaUserEdit,
-      count: 10,
-      keys: ["verificationLeads"],
-    },
-    {
-      title: "Review Leads",
       Icon: FaUserEdit,
       count: 10,
       keys: ["reviewLeads"],
@@ -103,13 +103,13 @@ const Dashboard = () => {
       keys: ["totalLeads"],
     },
     {
-      title: "Submission Leads",
+      title: "Filling Leads",
       Icon: FaUserLock,
       count: 80,
       keys: ["submissionLeads"],
     },
     {
-      title: "Finance Leads",
+      title: "Payments Leads",
       Icon: FaUserLock,
       count: 80,
       keys: ["processPayments"],
@@ -757,7 +757,7 @@ const Dashboard = () => {
             </>
            )}
 
-          {userData?.role === "2" && ![8].includes(userData?.departmentId) && (
+          {/* {userData?.role === "2" && ![8].includes(userData?.departmentId) && (
             <Col xl={6} sm={12} xs={24}>
               <Select
                 showSearch
@@ -773,7 +773,7 @@ const Dashboard = () => {
                 allowClear
               />
             </Col>
-          )}
+          )} */}
 
           {(userData?.role === "5" || userData?.role === "2") &&
             ![8, 9].includes(userData?.departmentId) && (

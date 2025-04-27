@@ -53,13 +53,13 @@ const Sidebar: React.FC<any> = () => {
       accessRoles: [1],
       departmentAccess: [-1],
     },
-    {
-      title: 'Team Lead',
-      path: '/teamlead',
-      Icon: UserOutlined, 
-      accessRoles: [1],
-      departmentAccess: [-1],
-    },
+    // {
+    //   title: 'Team Lead',
+    //   path: '/teamlead',
+    //   Icon: UserOutlined, 
+    //   accessRoles: [1],
+    //   departmentAccess: [-1],
+    // },
     {
       title: 'Team',
       path: '/team',
@@ -128,7 +128,7 @@ const Sidebar: React.FC<any> = () => {
       path: '/escalation',
       Icon: BiSolidFile, 
       accessRoles: [1,2,3,5],
-      departmentAccess: [-1,2,3,4,5,6,7,8,9,22],
+      departmentAccess: [-1,22],
     },
   ]
 

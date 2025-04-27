@@ -32,7 +32,7 @@ const TeamForm = () => {
     const localUserData = localStorageContent.getUserData()
 
     const onChangeDepartments = async (selected: any) => {
-      await fetchTeamLeadList(selected);
+     // await fetchTeamLeadList(selected);
 
       if(selected.some((dep: any) => [1,2,3,4,5,6].includes(dep))){
         setIsSenior(false)
@@ -69,20 +69,20 @@ const TeamForm = () => {
                 rules: [{ required: false, message: 'Please Select Is Senior' }],
             }
         },
-        {
-          label: 'Team Lead',
-          key: 'teamLeadIds',
-          elementType: 'MULTI_SELECT',
-          required: true,
-          disable: false,
-          options: teamLeadList,
-          onChangeField: () => {},
-          type: 'text',
-          placeholder: 'Select Team Lead',
-          config: {
-            rules: [{ required: true, message: 'Please Select Team Lead' }],
-          }
-        },
+        // {
+        //   label: 'Team Lead',
+        //   key: 'teamLeadIds',
+        //   elementType: 'MULTI_SELECT',
+        //   required: true,
+        //   disable: false,
+        //   options: teamLeadList,
+        //   onChangeField: () => {},
+        //   type: 'text',
+        //   placeholder: 'Select Team Lead',
+        //   config: {
+        //     rules: [{ required: true, message: 'Please Select Team Lead' }],
+        //   }
+        // },
         {
             label: 'First Name',
             key: 'firstName',
@@ -209,48 +209,50 @@ const TeamForm = () => {
       }
      
     }
-    const fetchTeamLeadList = async (selected: any) => {
-      try {
-          setIsLoading(true)
-          const response = await filterTeamLeadByDept({ departmentIds: selected });
-          const { data } = response
-          if(data && data.length > 0){
-            setTeamLeadList(data?.map((dt: any) => ({
-                value: dt.user_id,
-                label: `${dt.first_name} ${dt.last_name}`,
-            })))
-          }
-          setIsLoading(false)
-      } catch (err: any) {
-          setIsLoading(false)
-          dispatch(setError({ status: true, type: 'error', message: err }))
-      }
-    }
+    // const fetchTeamLeadList = async (selected: any) => {
+    //   try {
+    //       setIsLoading(true)
+    //       const response = await filterTeamLeadByDept({ departmentIds: selected });
+    //       const { data } = response
+    //       if(data && data.length > 0){
+    //         setTeamLeadList(data?.map((dt: any) => ({
+    //             value: dt.user_id,
+    //             label: `${dt.first_name} ${dt.last_name}`,
+    //         })))
+    //       }
+    //       setIsLoading(false)
+    //   } catch (err: any) {
+    //       setIsLoading(false)
+    //       dispatch(setError({ status: true, type: 'error', message: err }))
+    //   }
+    // }
     const onFormSubmit = async (data: any) => {
+      console.log("rrrrr");
       try {
-          const copyData = {...data}
-          if (isEditable) {
-            copyData.status = (Array.isArray(copyData?.status) && copyData?.status?.length > 0) ? '1' : '0'
-            if (Array.isArray(copyData.teamLeadIds) && copyData.teamLeadIds.length > 0) {
-              copyData.teamLeadIds = copyData.teamLeadIds.map((item: any) => item?.value || item);
-            } else {
-              copyData.teamLeadIds = data.teamLeadIds.map(((item: any) => item?.value || item))
-            }
-          }
-          copyData.isSenior = (Array.isArray(copyData?.isSenior) && copyData?.isSenior?.length > 0) ? '1' : '0'
-          setIsLoading(true)
-          if(isEditable){
-            await editTeam(copyData, params.id) 
-          }else{
-            await createTeam(copyData)
-          }
-          setIsLoading(false)
-          navigate('/team')
+        const copyData = { ...data };
+        
+        if (isEditable) {
+          copyData.status = (Array.isArray(copyData?.status) && copyData?.status.length > 0) ? '1' : '0';
+        }
+    
+        copyData.isSenior = (Array.isArray(copyData?.isSenior) && copyData?.isSenior.length > 0) ? '1' : '0';
+    
+        setIsLoading(true);
+    
+        if (isEditable) {
+          await editTeam(copyData, params.id);
+        } else {
+          await createTeam(copyData);
+        }
+    
+        setIsLoading(false);
+        navigate('/team');
       } catch (err: any) {
-          setIsLoading(false)
-          dispatch(setError({ status: true, type: 'error', message: err }))
+        setIsLoading(false);
+        dispatch(setError({ status: true, type: 'error', message: err?.message || 'Something went wrong' }));
       }
     }
+    
     
     useEffect(() => {
       if(Object.keys(params).length > 0 && location.pathname.includes('edit')){

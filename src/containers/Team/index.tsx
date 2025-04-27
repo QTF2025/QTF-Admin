@@ -51,20 +51,20 @@ const Team = () => {
         rules: [{ required: false, message: 'Please Enter Departments' }],
       }
     },
-    {
-      label: 'Team Lead',
-      key: 'teamLeadIds',
-      elementType: 'SELECT',
-      required: true,
-      disable: teamLeadList ? false : true,
-      options: teamLeadList,
-      onChangeField: () => { },
-      type: 'string',
-      placeholder: 'Select Team Lead',
-      config: {
-        rules: [{ required: false, message: 'Please Select Team Lead' }],
-      }
-    },
+    // {
+    //   label: 'Team Lead',
+    //   key: 'teamLeadIds',
+    //   elementType: 'SELECT',
+    //   required: true,
+    //   disable: teamLeadList ? false : true,
+    //   options: teamLeadList,
+    //   onChangeField: () => { },
+    //   type: 'string',
+    //   placeholder: 'Select Team Lead',
+    //   config: {
+    //     rules: [{ required: false, message: 'Please Select Team Lead' }],
+    //   }
+    // },
     {
       title: "Id",
       key: "user_id",
@@ -153,11 +153,11 @@ const Team = () => {
       key: "dept",
       render: (record: any) => <span>{record?.departments?.map((dep: any, i: number) => `${dep?.value}${record?.departments.length - 1 === i ? '' : ', '}`)}</span>
     },
-    {
-      title: "Team Lead(s)",
-      key: "teamleads",
-      render: (record: any) => <span>{record?.teamLeads?.map((dep: any, i: number) => `${dep?.first_name} ${dep?.last_name}${record?.teamLeads.length - 1 === i ? '' : ', '}`)}</span>
-    },
+    // {
+    //   title: "Team Lead(s)",
+    //   key: "teamleads",
+    //   render: (record: any) => <span>{record?.teamLeads?.map((dep: any, i: number) => `${dep?.first_name} ${dep?.last_name}${record?.teamLeads.length - 1 === i ? '' : ', '}`)}</span>
+    // },
     {
       title: 'Is Senior',
       dataIndex: 'is_senior',
