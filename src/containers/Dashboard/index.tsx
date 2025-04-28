@@ -266,7 +266,7 @@ const Dashboard = () => {
         return;
       }
       setIsLoading(true); // Start loading
-      const response = await getTeamList(`/team/search-teams?teamLeadId=${e}`);
+      const response = await getTeamList(`/team/search-teams?deptId=${userData.departmentId}`);
       setIsTeamDropdownDisabled(false); // Keep the dropdown disabled if no data
       // const response = await getTeamList(
       //   `/team/search-teams?teamId=${
@@ -642,7 +642,7 @@ const Dashboard = () => {
       userData?.departmentId !== 8
     ) {
       if (!dataLoaded) {
-        // fetchTeamList();
+         fetchTeamList();
       }
     }
   }, []);
@@ -787,7 +787,6 @@ const Dashboard = () => {
                   filterOption={filterOption}
                   onClear={() => setTeamFilter(null)}
                   allowClear
-                  disabled={isTeamDropdownDisabled} // Disable or enable based on state
                 />
               </Col>
             )}

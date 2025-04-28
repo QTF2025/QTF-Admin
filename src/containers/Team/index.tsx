@@ -65,11 +65,11 @@ const Team = () => {
     //     rules: [{ required: false, message: 'Please Select Team Lead' }],
     //   }
     // },
-    {
-      title: "Id",
-      key: "user_id",
-      render: (record: any) => <span>{record?.user_id}</span>
-    },
+    // {
+    //   title: "Id",
+    //   key: "user_id",
+    //   render: (record: any) => <span>{record?.user_id}</span>
+    // },
     {
       label: 'Name',
       key: 'name',
