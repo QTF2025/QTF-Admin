@@ -99,7 +99,7 @@ const Sidebar: React.FC<any> = () => {
       title: 'Walkouts',
       path: '/walkouts',
       Icon: MdOutlineGroupAdd, 
-      accessRoles: [1, 2],
+      accessRoles: [1, 2,3],
       departmentAccess: [-1, 5],
     },
     {
