@@ -9,11 +9,11 @@ function BackToAssign({ submitBackStep, setCurrentBackStepDep, showBackStepModal
     const userData = localStorageContent.getUserData()
     const [form] = Form.useForm();
     const depts = [                
-        { label: 'Process', value: 2 },
-        { label: 'Preparation', value: 3 },
-        { label: 'Review', value: 4 },
-        { label: 'Finance', value: 5 },
-        { label: 'Submission', value: 6 },
+        { label: 'Documents', value: 2 },
+        // { label: 'Preparation', value: 3 },
+        { label: 'Preparation', value: 4 },
+        { label: 'Payments', value: 5 },
+        { label: 'Filling', value: 6 },
     ];
     const endRange = depts.findIndex((item) => item.value === userData?.departmentId)
     const fieldsData = [

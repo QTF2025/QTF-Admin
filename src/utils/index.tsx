@@ -77,19 +77,19 @@ export  const getLeadStatus = (id: any) => {
     let status;
     switch(id) {
         case '1':
-            status = "Process"
+            status = "Documents"
           return status;
-        case '2':
+        // case '2':
+        //     status = "Preparation"
+        //   return status;
+        case '3':
             status = "Preparation"
           return status;
-        case '3':
-            status = "Review"
-          return status;
         case '4':
-            status = "Finance"
+            status = "Payments"
           return status;
         case '6':
-            status = "Submission"
+            status = "Filling"
           return status;
         case '7':
             status = "Completed"

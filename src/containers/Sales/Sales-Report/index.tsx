@@ -257,15 +257,15 @@ const SalesDataReports = () => {
     const renderLeadStatus = (lead_status: string): JSX.Element => {
         switch (lead_status) {
           case "1":
-            return <p>Process</p>;
-          case "2":
-            return <p>Verification</p>;
+            return <p>Documents</p>;
+          // case "2":
+          //   return <p>Verification</p>;
           case "3":
-            return <p>Review</p>;
+            return <p>Preparation</p>;
           case "4":
-            return <p>Finance</p>;
+            return <p>Payments</p>;
           case "6":
-            return <p>Submission</p>;
+            return <p>Filling</p>;
           case "7":
             return <p>Completed</p>;
           default:
@@ -308,24 +308,24 @@ const SalesDataReports = () => {
         key: 'phone_number',
         render: (text: any,data: any) => <a href={`callto:1${data.phone_number}`}><BiSolidPhoneCall size={25}/></a>
         },
-        {
-            title: '',
-            dataIndex: 'phone_number',
-            key: 'phone_number',
-            render: (text: any, data: any) => (
-                <a 
-                    onClick={(e) => {
-                        e.preventDefault(); // Prevent the default `callto:` action
-                        const fullName = `${localUserData.firstName} ${localUserData.lastName}`;
-                        alert("Message sent successfully");
+        // {
+        //     title: '',
+        //     dataIndex: 'phone_number',
+        //     key: 'phone_number',
+        //     render: (text: any, data: any) => (
+        //         <a 
+        //             onClick={(e) => {
+        //                 e.preventDefault(); // Prevent the default `callto:` action
+        //                 const fullName = `${localUserData.firstName} ${localUserData.lastName}`;
+        //                 alert("Message sent successfully");
 
-                        handleApiCall(fullName, data.name, `+1${data.phone_number}`); // Trigger the API call
-                    }}
-                >
-                    <BiLogoWhatsapp size={25} />
-                </a>
-            ),
-        },
+        //                 handleApiCall(fullName, data.name, `+1${data.phone_number}`); // Trigger the API call
+        //             }}
+        //         >
+        //             <BiLogoWhatsapp size={25} />
+        //         </a>
+        //     ),
+        // },
         {
             title: 'Upload type',
             dataIndex: 'is_senior',

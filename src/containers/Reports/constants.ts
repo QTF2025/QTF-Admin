@@ -1,22 +1,22 @@
 export const statusOptions = [
     {
-        label: 'Process',
+        label: 'Documents',
         value: '1'
     },
+    // {
+    //     label: 'Preparation',
+    //     value: '2'
+    // },
     {
         label: 'Preparation',
-        value: '2'
-    },
-    {
-        label: 'Review',
         value: '3'
     },
     {
-        label: 'Finance',
+        label: 'Payments',
         value: '4'
     },
     {
-        label: 'Submission',
+        label: 'Filling',
         value: '6'
     },
     {
@@ -27,23 +27,23 @@ export const statusOptions = [
 
 export const departmentOptions = [
     {
-        label: 'Process',
+        label: 'Documents',
         value: '2'
     },
+    // {
+    //     label: 'Preparation',
+    //     value: '3'
+    // },
     {
         label: 'Preparation',
-        value: '3'
-    },
-    {
-        label: 'Review',
         value: '4'
     },
     {
-        label: 'Finance',
+        label: 'Payments',
         value: '5'
     },
     {
-        label: 'Submission',
+        label: 'Filling',
         value: '6'
     }
 ]

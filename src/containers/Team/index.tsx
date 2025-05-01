@@ -327,8 +327,11 @@ const Team = () => {
     }
     fetchTeamList(null);
   }, [currentPage]);
+ 
 
+  console.log("veeru");
 
+console.log("totalCounttotalCount",totalCount,totalCount>10?false:true);
 
   return (
     <div>
@@ -356,17 +359,18 @@ const Team = () => {
         dataSource={teamList}
         loading={isLoading}
       />
-      <Pagination 
-          onChange={(pagination: any) => {
-            setCurrentPage(pagination)
-          }} 
-          style={{marginTop: '15px'}}
-          current={currentPage} 
-          defaultPageSize={25} 
-          showSizeChanger={false}
-          hideOnSinglePage
-          total={totalCount}   
-        />
+      
+        <Pagination 
+                 onChange={(pagination: any) => {
+                   setCurrentPage(pagination)
+                 }} 
+                 style={{marginTop: '15px'}}
+                 current={currentPage} 
+                 defaultPageSize={10} 
+                 showSizeChanger={false}
+                 hideOnSinglePage
+                 total={totalCount}   
+               />
     </div>
   )
 }
